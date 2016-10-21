@@ -1,6 +1,6 @@
 
 /******************************************************************************
-Title: assgn2_prob3.cpp
+Title: problem3.cpp
 
 Author: Robert Dudasik, Nick Biegel, Ethan Blatti
 
