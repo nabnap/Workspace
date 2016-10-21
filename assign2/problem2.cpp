@@ -2,7 +2,7 @@
 Title:				problem2.cpp
 Author:				Ethan Blatti, Nick Biegel, Robert Dudasik
 Created on:			October 15, 2016
-Description:			Program that normalizes test scores
+Description:		Program that normalizes test scores
 Purpose:			Demonstrate knowledge of vectors and use them to normalize test scores.
 Usage:				Enter in test scores and the program will normalize them
 Build with:			Visual Studio 2015

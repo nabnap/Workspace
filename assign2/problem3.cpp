@@ -1,18 +1,12 @@
-
 /******************************************************************************
-Title: problem3.cpp
-
-Author: Robert Dudasik, Nick Biegel, Ethan Blatti
-
-Created on: October 20th, 2016
-
-Description: A clock program that ticks once every second.
-
-Purpose: Demonstrate knowledge of classes by creating a clock object that displays the time every second.
-
-Usage: Enter the values for hours, minutes, and seconds and the clock will tick every second.
-
-Build with : Visual Studio
+Title: 				problem3.cpp
+Author: 			Robert Dudasik, Nick Biegel, Ethan Blatti
+Created on: 		October 20th, 2016
+Description: 		A clock program that ticks once every second.
+Purpose: 			Demonstrate knowledge of classes by creating a clock object that displays the time every second.
+Usage: 				Enter the values for hours, minutes, and seconds and the clock will tick every second.
+Build with: 		Visual Studio 2015
+Modifications:		None
 ******************************************************************************/
 
 

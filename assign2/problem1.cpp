@@ -2,7 +2,7 @@
 Title:				problem1.cpp
 Author:				Ethan Blatti, Nick Biegel, Robert Dudasik
 Created on:			October 14, 2016
-Description:			A phone book that allows a user to add, delete, and lookup entries
+Description:		A phone book that allows a user to add, delete, and lookup entries
 Purpose:			Demonstrate knowledge of classes by using classes to create a phone book directory
 Usage:				Select an option listed and manipulate the phone book as needed.
 Build with:			Visual Studio 2015
@@ -15,6 +15,7 @@ Modifications:		None
 using namespace std;
 
 //================= Entry =================//
+//Entry class declaration
 class Entry {
 public:
 	Entry(string, string);
@@ -23,13 +24,17 @@ public:
 private:
 	string name, number;
 };
+//Entry class definition
+//Entry constructor
 Entry::Entry(string ename, string enumber) {
 	name = ename;
 	number = enumber;
 }
+//Returns the name of the entry
 string Entry::getName() {
 	return name;
 }
+//Returns the number of the entry
 string Entry::getNumber() {
 	return number;
 }
@@ -40,6 +45,7 @@ string Entry::getNumber() {
 
 
 //================= Book =================//
+//Book class declaration
 class Book {
 public:
 	Book() {};
@@ -52,9 +58,13 @@ public:
 private:
 	vector<Entry> entryVec;
 };
+//Book class definition
+//Returns the entry book entries
 vector<Entry> Book::getAll() {
 	return entryVec;
 };
+
+//Delete entry by number
 bool Book::deleteNumber(string n) {
 	for (unsigned int i = 0; i < entryVec.size(); i++) {
 		Entry e = entryVec.at(i);
@@ -65,6 +75,8 @@ bool Book::deleteNumber(string n) {
 	}
 	return false;
 };
+
+//Delete entry by name
 bool Book::deleteName(string n) {
 	vector<Entry> tmp;
 	bool removed = false;
@@ -78,6 +90,8 @@ bool Book::deleteName(string n) {
 	}
 	return removed;
 };
+
+//Get entry by number
 Entry Book::getNumber(string n) {
 	for (Entry e : entryVec) {
 		if (e.getNumber() == n) {
@@ -86,6 +100,8 @@ Entry Book::getNumber(string n) {
 	}
 	return Entry("","");
 };
+
+//Get entry by name
 vector<Entry> Book::getName(string n) {
 	vector<Entry> tmp;
 	for (Entry e : entryVec) {
@@ -95,6 +111,8 @@ vector<Entry> Book::getName(string n) {
 	}
 	return tmp;
 };
+
+//Add entry to the book vector
 void Book::add(string name, string number) {
 	entryVec.push_back(Entry(name, number));
 };
@@ -105,6 +123,7 @@ void Book::add(string name, string number) {
 
 
 //================= UIManager =================//
+//UIManager class declaration
 class UIManager {
 public:
 	UIManager() { invalid = false; };
@@ -120,7 +139,8 @@ private:
 	Book book;
 	bool invalid;
 };
-
+//UIManager class definition
+//Runs the UI from start to end
 void UIManager::start() {
 	char input;
 	do{
@@ -147,6 +167,8 @@ void UIManager::start() {
 		}
 	} while (true);
 }
+
+//UI for deleting entry by name
 void UIManager::deleteEntriesByName() {
 	cout << "===== Delete entries by name =====" << endl << endl;
 	string n;
@@ -164,6 +186,8 @@ void UIManager::deleteEntriesByName() {
 	system("PAUSE");
 	system("cls");
 }
+
+//UI for deleting entry by number
 void UIManager::deleteEntryByNumber() {
 	cout << "===== Delete a entry by number =====" << endl << endl;
 	string n;
@@ -181,6 +205,8 @@ void UIManager::deleteEntryByNumber() {
 	system("PAUSE");
 	system("cls");
 }
+
+//UI for getting entry by number
 void UIManager::getEntryByNumber() {
 	cout << "===== Get name by number =====" << endl << endl;
 	string n;
@@ -197,6 +223,8 @@ void UIManager::getEntryByNumber() {
 	system("PAUSE");
 	system("cls");
 }
+
+//UI for getting entry by name
 void UIManager::getEntriesByName() {
 	cout << "===== Get numbers by name =====" << endl << endl;
 	string n;
@@ -214,6 +242,8 @@ void UIManager::getEntriesByName() {
 	system("PAUSE");
 	system("cls");
 }
+
+//UI for listing all entries
 void UIManager::listAllEntries() {
 	cout << "===== Get all entries in phonebook =====" << endl << endl;
 	for (Entry e : book.getAll()) {
@@ -223,6 +253,8 @@ void UIManager::listAllEntries() {
 	system("PAUSE");
 	system("cls");
 }
+
+//UI for adding entry
 void UIManager::addEntry() {
 	cout << "===== Add entry to phonebook =====" << endl << endl;
 	string name, number;
@@ -235,6 +267,8 @@ void UIManager::addEntry() {
 
 	system("cls");
 }
+
+//Displays the main menu to user
 void UIManager::displayMenu() {
 	cout << "Welcome to your phonebook!" << endl;
 	cout << "Select an option from below to perform it." << endl;
@@ -256,6 +290,7 @@ void UIManager::displayMenu() {
 
 //Main
 int main() {
+	//Created UIManager object and start 
 	UIManager uim;
 	uim.start();
 	return 0;
