@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>114</height>
+    <height>79</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,33 +15,44 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QComboBox" name="comboBox">
-     <item>
-      <property name="text">
-       <string>red</string>
-      </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Colour</string>
+       </property>
+      </widget>
      </item>
-     <item>
-      <property name="text">
-       <string>green</string>
-      </property>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBox">
+       <item>
+        <property name="text">
+         <string>Red</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Green</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Blue</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Black</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Yellow</string>
+        </property>
+       </item>
+      </widget>
      </item>
-     <item>
-      <property name="text">
-       <string>blue</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>black</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>yellow</string>
-      </property>
-     </item>
-    </widget>
+    </layout>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">

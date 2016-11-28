@@ -12,11 +12,11 @@ ColorDialog::ColorDialog(QWidget * parent) : QDialog(parent)
 void ColorDialog::colorSelect(){
     QString cstr = this->comboBox->currentText();
 
-    if(cstr == "red") color = Qt::red;
-    if(cstr == "green") color = Qt::green;
-    if(cstr == "blue") color = Qt::blue;
-    if(cstr == "black") color = Qt::black;
-    if(cstr == "yellow") color = Qt::yellow;
+    if(cstr == "Red") color = Qt::red;
+    if(cstr == "Green") color = Qt::green;
+    if(cstr == "Blue") color = Qt::blue;
+    if(cstr == "Black") color = Qt::black;
+    if(cstr == "Yellow") color = Qt::yellow;
 }
 
 void ColorDialog::saveColor(){

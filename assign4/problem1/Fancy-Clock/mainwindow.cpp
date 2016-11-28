@@ -56,7 +56,7 @@ void MainWindow::updateColor(){
 void MainWindow::colorDialog(){
     ColorDialog *cd = new ColorDialog(this);
     connect(cd, SIGNAL(accepted()), this, SLOT(updateColor()));
-    cd->show();
+    cd->exec();
 }
 
 void MainWindow::showContextMenu(const QPoint &pos){
