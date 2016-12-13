@@ -1,0 +1,47 @@
+QTabWidget::pane{
+	background-color:#eee;
+	border:none;
+}
+
+QTabWidget::tab-bar{
+
+}
+
+QTabBar::tab{
+	padding:10px 11px 10px 10px;
+	border-right:1px solid #dfdfdf;
+	
+}
+
+QTabBar::tab:selected {
+	border-top:1px solid #ddd;
+	background-color:#fff;
+}
+
+QTabBar::tab:!selected {
+    background-color:#eee;
+}
+
+
+QMenu {
+    background-color: #fff; /* sets background of the menu */
+    border: 1px solid #777;
+	padding:0px;
+}
+
+QMenu::item {
+    /* sets background of menu item. set this to something non-transparent
+        if you want menu color and menu item color to be different */
+    background-color: #fff;
+	
+	padding:5px 30px 5px 30px;
+	
+}
+QMenu::icon {
+	left:8px;
+}
+QMenu::item:selected { /* when user selects item using mouse or keyboard */
+    background-color: #eee;
+	color:#000;
+	border:none;
+}
